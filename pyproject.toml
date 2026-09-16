@@ -1,6 +1,6 @@
 [project]
 name = "comfyui-evaluate-pack"
-description = """Transforms a string with Python code written in the node"""
+description = """Transforms a string by evaluating Python code written in the node"""
 
 version = "1.0.0"
 license = { file = "LICENSE" }

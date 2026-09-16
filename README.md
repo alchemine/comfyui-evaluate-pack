@@ -2,7 +2,7 @@
 
 [English](README.md) | [한국어](README_ko.md)
 
-Transforms a string with Python code written in the node.
+Transforms a string by evaluating Python code written in the node.
 
 ## Usage
 

@@ -2,7 +2,7 @@
 
 [English](README.md) | [한국어](README_ko.md)
 
-워크플로우 안에서 사용자 정의 Python 함수를 문자열에 적용합니다.
+노드에 작성한 Python 코드로 문자열을 변환합니다.
 
 ## 사용법
 

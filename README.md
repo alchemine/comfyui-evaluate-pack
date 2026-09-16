@@ -2,7 +2,7 @@
 
 [English](README.md) | [한국어](README_ko.md)
 
-Runs a user-defined Python function over a string inside the workflow.
+Transforms a string with Python code written in the node.
 
 ## Usage
 

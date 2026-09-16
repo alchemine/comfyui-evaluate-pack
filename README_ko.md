@@ -26,7 +26,26 @@ def main(tag: str) -> str:
 ```
 
 > [!WARNING]
-> `Evaluate`는 `exec()`로 임의의 Python 코드를 실행합니다. 신뢰할 수 있는 코드만 사용하세요.
+> `Evaluate`와 `Evaluates`는 `exec()`로 임의의 Python 코드를 실행합니다. 신뢰할 수 있는 코드만 사용하세요.
+
+**Evaluates**는 같은 일을 문자열 리스트에 합니다. `tags`에 문자열 리스트를 연결하면 리스트 전체가
+`main(tags: list[str]) -> str` 한 번의 호출로 전달됩니다.
+
+| 파라미터 | 타입 | 기본값 | 설명 |
+|----------|------|--------|------|
+| `tags` | STRING (리스트) | (필수) | `main(tags)`에 전달될 입력 문자열들 |
+| `code` | STRING (multiline) | 합치기 스니펫 | `def main(tags: list[str]) -> str`을 정의해야 하는 Python 코드 |
+
+| 출력 | 설명 |
+|------|------|
+| `tag` | `main(tags)`의 반환값 |
+
+기본 코드는 문자열들을 쉼표로 합칩니다:
+
+```python
+def main(tags: list[str]) -> str:
+    return ", ".join(tags)
+```
 
 ## 설치
 
@@ -40,3 +59,5 @@ git clone https://github.com/alchemine/comfyui-evaluate-pack
 ## 노드 (`EvaluatePack/Evaluate`)
 
 **Evaluate** — 사용자 정의 Python 코드를 입력 문자열에 적용해 변환된 결과를 반환합니다.
+
+**Evaluates** — 같은 일을 문자열 리스트에 적용해 문자열 하나로 만듭니다.

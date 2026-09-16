@@ -26,7 +26,26 @@ def main(tag: str) -> str:
 ```
 
 > [!WARNING]
-> `Evaluate` executes arbitrary Python via `exec()`. Only use it with code you trust.
+> `Evaluate` and `Evaluates` execute arbitrary Python via `exec()`. Only use them with code you trust.
+
+**Evaluates** does the same over a list of strings: connect a string list to `tags`, and the whole
+list is handed to one `main(tags: list[str]) -> str` call.
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `tags` | STRING (list) | (required) | Input strings passed to `main(tags)` |
+| `code` | STRING (multiline) | join snippet | Python source that must define `def main(tags: list[str]) -> str` |
+
+| Output | Description |
+|--------|-------------|
+| `tag` | The string returned by `main(tags)` |
+
+The default code joins the strings with commas:
+
+```python
+def main(tags: list[str]) -> str:
+    return ", ".join(tags)
+```
 
 ## Installation
 
@@ -40,3 +59,5 @@ git clone https://github.com/alchemine/comfyui-evaluate-pack
 ## Nodes (`EvaluatePack/Evaluate`)
 
 **Evaluate** — runs user-defined Python code against an input string and returns the transformed result.
+
+**Evaluates** — the same over a list of strings, reduced to one output string.

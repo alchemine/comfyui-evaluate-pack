@@ -1,0 +1,17 @@
+[project]
+name = "comfyui-evaluate-pack"
+description = """Runs a user-defined Python main(tag) over a string in the workflow"""
+
+version = "1.0.0"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/alchemine/comfyui-evaluate-pack"
+"Bug Tracker" = "https://github.com/alchemine/comfyui-evaluate-pack/issues"
+
+[tool.comfy]
+PublisherId = "alchemine"
+DisplayName = "ComfyUI-Evaluate-Pack"
+Icon = ""

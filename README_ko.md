@@ -2,7 +2,7 @@
 
 [English](README.md) | [한국어](README_ko.md)
 
-노드에 작성한 Python 코드를 evaluate하여 문자열을 변환합니다.
+노드에 작성한 Python 코드를 동적으로(dynamically) evaluate하여 문자열을 변환합니다.
 
 ## 사용법
 

@@ -23,34 +23,7 @@
 nodes/evaluate.py:40:9: S102 Use of `exec` detected
 nodes/evaluate.py:87:9: S102 Use of `exec` detected
 Found 2 errors.
-unformatted: File would be reformatted
-  --> nodes/lib/utils.py:45:42
-   |
-44 |             node = match.group(1)
-   -             message = message[match.end():]
-45 +             message = message[match.end() :]
-46 |         else:
---------------------------------------------------------------------------------
-62 |         # INFO/WARNING/ERROR are the levels actually used; 7 fits the longest.
-   -         handler.setFormatter(_NodeTagFormatter(
-   -             "%(asctime)s | %(levelname)-7s | %(message)s",
-   -             datefmt="%Y-%m-%d %H:%M:%S",
-   -         ))
-63 +         handler.setFormatter(
-64 +             _NodeTagFormatter(
-65 +                 "%(asctime)s | %(levelname)-7s | %(message)s",
-66 +                 datefmt="%Y-%m-%d %H:%M:%S",
-67 +             )
-68 +         )
-69 |         logger.addHandler(handler)
---------------------------------------------------------------------------------
-85 |         except Exception:
-   -             get_logger().error("unexpected error in '%s'", func.__name__,
-   -                                exc_info=True)
-86 +             get_logger().error("unexpected error in '%s'", func.__name__, exc_info=True)
-87 |             raise
-   |
-
+Would reformat: nodes/lib/utils.py
 1 file would be reformatted, 7 files already formatted
 ```
 

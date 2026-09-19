@@ -37,7 +37,7 @@ class Evaluate:
     @exception_handler
     def execute(cls, tag: str, code: str) -> tuple[str]:
         ns: dict = {}
-        exec(compile(code, "<evaluate_code>", "exec"), ns)
+        exec(compile(code, "<evaluate_code>", "exec"), ns)  # noqa: S102
         main = ns.get("main")
         if not callable(main):
             raise TypeError("code must define a callable main(tag: str) -> str")
@@ -84,7 +84,7 @@ class Evaluates:
     def execute(cls, tags: list[str], code: list[str]) -> tuple[str]:
         # INPUT_IS_LIST hands every input over as a list; `code` is one widget.
         ns: dict = {}
-        exec(compile(code[0], "<evaluates_code>", "exec"), ns)
+        exec(compile(code[0], "<evaluates_code>", "exec"), ns)  # noqa: S102
         main = ns.get("main")
         if not callable(main):
             raise TypeError("code must define a callable main(tags: list[str]) -> str")
